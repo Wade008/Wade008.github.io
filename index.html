@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wade Doolan Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <header>
+        <!-- Nav bar -->
+        <nav class="nav" id="nav-items">
+            <!-- holds the nav items - links to other pages -->
+
+            <a class="active" href="/">Wade Doolan</a>
+            <a href="/">Home</a>
+            <a href="./pages/profexp.html">Professional experience</a>
+            <a href="./pages/interests.html">Interests</a>
+            <a href="./pages/blogs.html">Blogs</a>
+            <a href="./pages/contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+        </nav>
+    </header>
+    <!-- a main tag to hold a background images and some introductory text about me -->
+    <Main>
+        <h1> Home page - put my intro here</h1>
+
+
+
+
+
+
+
+    </Main>
+    <!-- footer section -->
+    <footer>
+        <p>Wade Doolan</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            let x = document.getElementById("nav-items");
+            if (x.className === "nav") {
+                x.className += " response";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
 </body>
+
 </html>

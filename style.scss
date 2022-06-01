@@ -1,0 +1,93 @@
+$primary-background: #f7f7f9;
+$nav-font-size: 17px;
+$font-family: "Poppins Light",
+sans-serif;
+$nav-color: #1a181891;
+
+@mixin nav() {
+
+    padding: 2vw;
+    overflow: hidden;
+
+    a {
+
+        text-decoration: none;
+        text-align: center;
+        font-size: $nav-font-size;
+        font-family: $font-family;
+        padding: 14px 20px;
+        color: $nav-color;
+        float:left;
+
+    
+        
+
+
+    }
+
+    a.active {
+        font-weight: bold;
+    }
+
+    .icon {
+        display: none;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-background;
+}
+
+main {
+    background-color: #cce3de;
+    height: 100vh
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    @include nav;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav.response {
+        position: relative;
+    }
+
+    .nav.response .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav.response a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
