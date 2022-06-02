@@ -1,36 +1,75 @@
 $primary-background: #f7f7f9;
+$secondary-background: #e2cbda;
 $nav-font-size: 17px;
-$font-family: "Poppins Light",
+$brand-font-size: 28px;
+$nav-font-family: "Poppins Light",
 sans-serif;
 $nav-color: #1a181891;
 
+
+
 @mixin nav() {
 
-    padding: 2vw;
-    overflow: hidden;
-
-    a {
-
-        text-decoration: none;
-        text-align: center;
+    // Set up for mobile first
+    .nav {
+        padding: 2vw;
+        overflow: hidden;
+        font-family: $nav-font-family;
         font-size: $nav-font-size;
-        font-family: $font-family;
-        padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav a {
+        text-decoration: none;
         color: $nav-color;
-        float:left;
-
-    
-        
-
-
     }
 
-    a.active {
-        font-weight: bold;
+    .nav .brand {
+        font-size: $brand-font-size;
+        padding: 10px 20px;
     }
 
-    .icon {
+    .nav-list {
+        list-style-type: none;
+    }
+
+    .nav-list li {
+        padding: 10px 20px;
+    }
+
+    // show the hamburger by default
+    .nav-list li:not(:last-child) {
         display: none;
+    }
+    // css used when the hamburger is toggled
+    // Note: .response class is added interactively by clicking on the hamburger.
+    // This is done using the javascript - refer to script tags at the bottom of each page
+    .nav.response {
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .nav .icon {
+        font-size: $brand-font-size;
+    }
+
+    .nav.response .icon {
+        position: absolute;
+        right: 1px;
+        top: 1px;  
+    }
+
+    .nav.response li {
+       
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
     }
 
 }
@@ -46,48 +85,49 @@ body {
 }
 
 main {
-    background-color: #cce3de;
-    height: 100vh
+
+    height: 90vh
 }
 
 h1 {
     text-align: center;
 }
 
-nav {
+header {
     @include nav;
 }
 
 footer {
+    background: $secondary-background;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav a:not(:first-child) {
-        display: none;
-    }
+// @media only screen and (max-width: 768px) {
+//     .nav a:not(:first-child) {
+//         display: none;
+//     }
 
-    .nav a.icon {
-        float: right;
-        display: block;
-    }
-}
+//     .nav a.icon {
+//         float: right;
+//         display: block;
+//     }
+// }
 
-@media only screen and (max-width: 768px) {
-    .nav.response {
-        position: relative;
-    }
+// @media only screen and (max-width: 768px) {
+//     .nav.response {
+//         position: relative;
+//     }
 
-    .nav.response .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+//     .nav.response .icon {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//     }
 
-    .nav.response a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
+//     .nav.response a {
+//         float: none;
+//         display: block;
+//         text-align: left;
+//     }
+// }

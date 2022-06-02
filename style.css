@@ -9,65 +9,65 @@ body {
 }
 
 main {
-  background-color: #cce3de;
-  height: 100vh;
+  height: 90vh;
 }
 
 h1 {
   text-align: center;
 }
 
-nav {
+header .nav {
   padding: 2vw;
   overflow: hidden;
-}
-nav a {
-  text-decoration: none;
-  text-align: center;
-  font-size: 17px;
   font-family: "Poppins Light", sans-serif;
-  padding: 14px 20px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav a {
+  text-decoration: none;
   color: rgba(26, 24, 24, 0.568627451);
-  float: left;
 }
-nav a.active {
-  font-weight: bold;
+header .nav .brand {
+  font-size: 28px;
+  padding: 10px 20px;
 }
-nav .icon {
+header .nav-list {
+  list-style-type: none;
+}
+header .nav-list li {
+  padding: 10px 20px;
+}
+header .nav-list li:not(:last-child) {
   display: none;
+}
+header .nav.response {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+header .nav .icon {
+  font-size: 28px;
+}
+header .nav.response .icon {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+header .nav.response li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 footer {
+  background: #e2cbda;
   text-align: center;
-  padding: 20px 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav a:not(:first-child) {
-    display: none;
-  }
-
-  .nav a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .nav.response {
-    position: relative;
-  }
-
-  .nav.response .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .nav.response a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

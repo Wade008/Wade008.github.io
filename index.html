@@ -13,19 +13,27 @@
 <body>
     <header>
         <!-- Nav bar -->
+
+
         <nav class="nav" id="nav-items">
+
+            <div class="brand">
+                <a class="active" href="/">Wade Doolan</a>
+            </div>
+
+
             <!-- holds the nav items - links to other pages -->
 
-            <a class="active" href="/">Wade Doolan</a>
-            <a href="/">Home</a>
-            <a href="./pages/profexp.html">Professional experience</a>
-            <a href="./pages/interests.html">Interests</a>
-            <a href="./pages/blogs.html">Blogs</a>
-            <a href="./pages/contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="./pages/profexp.html">Professional experience</a></li>
+                <li><a href="./pages/interests.html">Interests</a></li>
+                <li><a href="./pages/blogs.html">Blogs</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            </ul>
         </nav>
     </header>
     <!-- a main tag to hold a background images and some introductory text about me -->
@@ -52,7 +60,9 @@
             } else {
                 x.className = "nav";
             }
+          
         }
+
     </script>
 </body>
 
