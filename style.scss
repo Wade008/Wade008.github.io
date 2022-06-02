@@ -1,5 +1,5 @@
 $primary-background: #f7f7f9;
-$secondary-background: #e2cbda;
+$secondary-background: #adb5bd;
 $nav-font-size: 17px;
 $brand-font-size: 28px;
 $nav-font-family: "Poppins Light",
@@ -17,6 +17,7 @@ $nav-color: #1a181891;
         font-family: $nav-font-family;
         font-size: $nav-font-size;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
@@ -38,40 +39,6 @@ $nav-color: #1a181891;
     .nav-list li {
         padding: 10px 20px;
     }
-
-    // show the hamburger by default
-    .nav-list li:not(:last-child) {
-        display: none;
-    }
-    // css used when the hamburger is toggled
-    // Note: .response class is added interactively by clicking on the hamburger.
-    // This is done using the javascript - refer to script tags at the bottom of each page
-    .nav.response {
-        position: relative;
-        display:flex;
-        flex-direction: column;
-        justify-content:flex-start;
-        align-items: flex-start;
-    }
-
-    .nav .icon {
-        font-size: $brand-font-size;
-    }
-
-    .nav.response .icon {
-        position: absolute;
-        right: 1px;
-        top: 1px;  
-    }
-
-    .nav.response li {
-       
-        display: flex;
-        flex-direction: column;
-        justify-content:flex-start;
-        align-items: flex-start;
-    }
-
 }
 
 * {
@@ -91,6 +58,8 @@ main {
 
 h1 {
     text-align: center;
+    font-family: $nav-font-family;
+    color: $nav-color;
 }
 
 header {
@@ -100,34 +69,70 @@ header {
 footer {
     background: $secondary-background;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px;
+    display:flex;
+    justify-content: space-between;
+
+
+    .contact-icon i {
+      
+        padding: 5px 10px;
+    }
+
 }
 
-// @media only screen and (max-width: 768px) {
-//     .nav a:not(:first-child) {
-//         display: none;
-//     }
+// Make nav bar responsive
+@media only screen and (min-width: 1200px) {
 
-//     .nav a.icon {
-//         float: right;
-//         display: block;
-//     }
-// }
+    .nav-list  {
+        
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
-// @media only screen and (max-width: 768px) {
-//     .nav.response {
-//         position: relative;
-//     }
+    .nav-list li:last-child {
+        display: none;
+    }
 
-//     .nav.response .icon {
-//         position: absolute;
-//         right: 0;
-//         top: 0;
-//     }
 
-//     .nav.response a {
-//         float: none;
-//         display: block;
-//         text-align: left;
-//     }
-// }
+}
+
+@media only screen and (max-width: 1200px) {
+      // css used when the hamburger is toggled
+    // Note: .response class is added interactively by clicking on the hamburger.
+    // This is done using the javascript - refer to script tags at the bottom of each page
+    
+     // show the hamburger by default
+     .nav-list li:not(:last-child) {
+        display: none;
+    }
+
+    // size the hamburger to be the same as the brand text
+    .nav .icon {
+        font-size: $brand-font-size;
+    }
+
+    .nav.response {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .nav.response .icon {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+
+    .nav.response li {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
