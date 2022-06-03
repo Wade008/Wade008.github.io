@@ -8,6 +8,10 @@
     <title>Wade Doolan Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="./toggleFunction.js"></script>
 </head>
 
 <body>
@@ -25,50 +29,61 @@
             <!-- holds the nav items - links to other pages -->
 
             <ul class="nav-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="./pages/profexp.html">Professional experience</a></li>
-                <li><a href="./pages/interests.html">Interests</a></li>
-                <li><a href="./pages/blogs.html">Blogs</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a></li>
+                <li><a href="/" alt="link to page">Home</a></li>
+                <li><a href="./pages/profexp.html" alt="link to page">Professional experience</a></li>
+                <li><a href="./pages/interests.html" alt="link to page">Interests</a></li>
+                <li><a href="./pages/blogs.html" alt="link to page">Blogs</a></li>
+                <li><a href="./pages/contact.html" alt="link to page">Contact</a></li>
+                <li><a href="javascript:void(0);" alt="hamburger icon" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a></li>
             </ul>
         </nav>
     </header>
     <!-- a main tag to hold a background images and some introductory text about me -->
     <Main>
-        <h1> Home page - put my intro here</h1>
+        <section class="page-title">
+            <h2> Hi, I'm Wade</h2>
+            <h2>I'm a data analyst and a full-stack web developer</h2>
 
+        </section>
 
+        <section class="container">
+            <div class="standard-container">
+                <figure class="image">
+                    <img src="./resources/Optimized-da-400.jpg" alt="" />
+                </figure>
+                <div class="text">
+                    <p>As a data analyst, I can help you find meaning in your business data.</p>
+                </div>
+            </div>
 
+            <div class="standard-container">
+                <figure class="image">
+                    <img src="./resources/Optimized-wd-400.jpg" alt="" />
+                </figure>
+                <div class="text">
+                    <p>As a full-stack web developer, I can build solutions that help your business.</p>
+                </div>
+            </div>
 
-
-
+        </section>
 
     </Main>
     <!-- footer section -->
+
     <footer>
-        <p>Wade Doolan</p>
+        <p class="name">Copyright &copy Wade Doolan</p>
         <div class="contact-icon">
-        <i class="fa fa-envelope"></i>
-        <i class="fa fa-linkedin"></i>
-        <i class="fa fa-github-square"></i>
-    </div>
+            <a href="mailto: wadedoolan@hotmail.com" alt="send an email"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/wade-doolan-profile" alt="view linkedin"><i
+                    class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Wade008" alt="view github"><i class="fa fa-github-square"></i></a>
+        </div>
     </footer>
 
-    <script>
-        function myFunction() {
-            let x = document.getElementById("nav-items");
-            if (x.className === "nav") {
-                x.className += " response";
-            } else {
-                x.className = "nav";
-            }
-          
-        }
 
-    </script>
+
 </body>
 
 </html>

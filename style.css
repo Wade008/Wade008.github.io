@@ -1,3 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container .standard-container {
+  width: 350px;
+}
+.container .image {
+  width: 350px;
+  height: 350px;
+  margin: 3vh 0;
+  border: 1px solid #adb5bd;
+  box-shadow: 5px 5px #adb5bd;
+}
+.container .image img {
+  max-width: 100%;
+  height: auto;
+}
+.container .text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-align: justify;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +37,8 @@ body {
 
 main {
   height: 90vh;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Poppins Light", sans-serif;
-  color: rgba(26, 24, 24, 0.568627451);
+  overflow-y: scroll;
+  margin: 3vw;
 }
 
 header .nav {
@@ -45,13 +68,31 @@ header .nav-list li {
 
 footer {
   background: #adb5bd;
-  text-align: center;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-footer .contact-icon i {
+footer .name {
+  color: rgba(26, 24, 24, 0.568627451);
+  font-family: "Poppins Light", sans-serif;
+  font-size: 17px;
+}
+footer .contact-icon a {
+  text-decoration: none;
+  color: rgba(26, 24, 24, 0.568627451);
   padding: 5px 10px;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 8vw;
+}
+.page-title h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(26, 24, 24, 0.568627451);
+  font-size: 32px;
+  margin: 2vw 0;
 }
 
 @media only screen and (min-width: 1200px) {
