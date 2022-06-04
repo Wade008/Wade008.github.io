@@ -37,7 +37,7 @@ body {
 
 main {
   height: 90vh;
-  overflow-y: scroll;
+  overflow: scroll;
   margin: 3vw;
 }
 
@@ -73,10 +73,19 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+footer .credit {
+  display: flex;
+  flex-direction: column;
+}
+footer .credit a {
+  color: rgba(26, 24, 24, 0.568627451);
+  font-family: "Poppins Light", sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+}
 footer .name {
   color: rgba(26, 24, 24, 0.568627451);
   font-family: "Poppins Light", sans-serif;
-  font-size: 17px;
 }
 footer .contact-icon a {
   text-decoration: none;
@@ -95,6 +104,27 @@ footer .contact-icon a {
   margin: 2vw 0;
 }
 
+.resume {
+  text-align: center;
+  margin: 4vw;
+}
+.resume button {
+  display: inline-block;
+  background-color: gray;
+  color: white;
+  text-transform: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 6px;
+  transition: 2s;
+}
+.resume button:hover {
+  background-color: lightgray;
+}
+
 @media only screen and (min-width: 1200px) {
   .nav-list {
     display: flex;
@@ -102,7 +132,6 @@ footer .contact-icon a {
     justify-content: flex-end;
     align-items: center;
   }
-
   .nav-list li:last-child {
     display: none;
   }
@@ -111,11 +140,9 @@ footer .contact-icon a {
   .nav-list li:not(:last-child) {
     display: none;
   }
-
   .nav .icon {
     font-size: 28px;
   }
-
   .nav.response {
     position: relative;
     display: flex;
@@ -123,18 +150,34 @@ footer .contact-icon a {
     justify-content: flex-start;
     align-items: flex-start;
   }
-
   .nav.response .icon {
     position: absolute;
     right: 6px;
     top: 6px;
   }
-
   .nav.response li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 0px) {
+  .name {
+    font-size: 14px;
+  }
+  .contact-icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact-icon {
+    display: flex;
+    flex-direction: row;
+  }
+  .name {
+    font-size: 17px;
   }
 }
 

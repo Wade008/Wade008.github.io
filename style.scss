@@ -14,6 +14,10 @@ $body-font-family: "Ubuntu", sans-serif;
 $body-font-size: 18px;
 $body-color: #000000;
 
+$credit-font-size: 11px;
+
+
+
 
 // nav component 
 @mixin nav() {
@@ -57,10 +61,23 @@ $body-color: #000000;
     justify-content: space-between;
     align-items: center;
 
+    .credit {
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .credit a {
+        color: $nav-color;
+        font-family: $nav-font-family;
+        font-size: $credit-font-size;
+        text-decoration: none;
+    }
+
     .name {
         color: $nav-color;
         font-family: $nav-font-family;
-        font-size: $nav-font-size;
+       
     }
 
     .contact-icon a {
@@ -68,6 +85,8 @@ $body-color: #000000;
         color: $nav-color;
         padding: 5px 10px;
     }
+
+   
 
 }
 
@@ -84,6 +103,11 @@ $body-color: #000000;
         margin: 2vw 0;
     }
 }
+
+
+// create image mixin here
+
+// create text mixin here
 
 
 .container {
@@ -138,7 +162,7 @@ body {
 main {
 
     height: 90vh;
-    overflow-y: scroll;
+    overflow: scroll;
     margin:3vw;
   
 }
@@ -152,10 +176,35 @@ footer {
 
 }
 
-
 .page-title {
     @include pTitle;
 }
+
+
+.resume {
+    text-align: center;
+    margin: 4vw;
+
+    button {
+        display: inline-block;
+        background-color: gray;
+        color: white;
+        text-transform: none;
+        font-family: $body-font-family;
+        font-size: $body-font-size;
+        font-weight: bold;
+        border: none;
+        padding: 15px 32px;
+        border-radius: 6px;
+        transition: 2s;
+    }
+
+    button:hover {
+        background-color: lightgray;
+    }
+}
+
+
 
 // Make nav bar responsive
 
@@ -212,4 +261,34 @@ footer {
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+}
+
+// make footer responsive
+
+@media only screen and (min-width: 0px) {
+
+
+    .name {
+        font-size: 14px;
+    }
+    .contact-icon{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+} 
+
+@media only screen and (min-width: 768px) {
+    
+    .contact-icon{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .name {
+        font-size: $nav-font-size;
+    }
+   
 }
