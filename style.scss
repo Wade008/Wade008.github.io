@@ -161,7 +161,8 @@ $credit-font-size: 11px;
 
     .text-cont {
         text-align: center;
-        color:$body-color;
+        color: $body-color;
+
         a {
             text-decoration: none;
             color: $body-color
@@ -169,6 +170,50 @@ $credit-font-size: 11px;
     }
 
 }
+
+
+.blog-wrap {
+    background-color: rgb(241, 236, 236);
+}
+
+.blog-title {
+    text-align: center;
+    padding: 5vw;
+    margin: 2vw;
+    background-color: $primary-background;
+    position: relative;
+    top: 2vw;
+    border-radius: 10px;
+
+    h2 {
+        font-family: $body-font-family;
+        color: $bodyTitle-color;
+        font-size: $bodyTitle-font-size;
+
+    }
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    // margin-left: 10vw;
+
+    // add these to a media query
+    .blog-list {
+        width: 500px;
+    }
+
+    .blog-post {
+        width: 500px;
+        ;
+    }
+
+
+}
+
+
 
 * {
     margin: 0;

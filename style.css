@@ -46,6 +46,38 @@
   color: #000000;
 }
 
+.blog-wrap {
+  background-color: rgb(241, 236, 236);
+}
+
+.blog-title {
+  text-align: center;
+  padding: 5vw;
+  margin: 2vw;
+  background-color: #f7f7f9;
+  position: relative;
+  top: 2vw;
+  border-radius: 10px;
+}
+.blog-title h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(26, 24, 24, 0.568627451);
+  font-size: 32px;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.blog-container .blog-list {
+  width: 500px;
+}
+.blog-container .blog-post {
+  width: 500px;
+}
+
 * {
   margin: 0;
   padding: 0;
