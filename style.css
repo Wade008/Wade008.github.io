@@ -13,6 +13,9 @@
   margin: 3vh 0;
   border: 1px solid #adb5bd;
   box-shadow: 5px 5px #adb5bd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container .image img {
   max-width: 100%;
@@ -23,6 +26,24 @@
   font-size: 18px;
   color: #000000;
   text-align: justify;
+}
+.container .contact-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container .contact-icon a {
+  color: rgba(26, 24, 24, 0.568627451);
+  font-size: 50px;
+  text-decoration: none;
+}
+.container .text-cont {
+  text-align: center;
+  color: #000000;
+}
+.container .text-cont a {
+  text-decoration: none;
+  color: #000000;
 }
 
 * {
@@ -37,7 +58,7 @@ body {
 
 main {
   height: 90vh;
-  overflow: scroll;
+  overflow: auto;
   margin: 3vw;
 }
 

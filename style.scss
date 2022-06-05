@@ -6,11 +6,13 @@ $nav-font-family: "Poppins Light",
 sans-serif;
 $nav-color: #1a181891;
 
-$bodyTitle-font-family: "Ubuntu", sans-serif;
+$body-font-family: "Ubuntu",
+sans-serif;
+
 $bodyTitle-font-size: 32px;
 $bodyTitle-color: #1a181891;
 
-$body-font-family: "Ubuntu", sans-serif;
+
 $body-font-size: 18px;
 $body-color: #000000;
 
@@ -52,6 +54,7 @@ $credit-font-size: 11px;
         padding: 10px 20px;
     }
 }
+
 // footer component
 @mixin foot() {
 
@@ -62,7 +65,7 @@ $credit-font-size: 11px;
     align-items: center;
 
     .credit {
-        
+
         display: flex;
         flex-direction: column;
     }
@@ -77,7 +80,7 @@ $credit-font-size: 11px;
     .name {
         color: $nav-color;
         font-family: $nav-font-family;
-       
+
     }
 
     .contact-icon a {
@@ -86,39 +89,33 @@ $credit-font-size: 11px;
         padding: 5px 10px;
     }
 
-   
+
 
 }
 
 // page title component
 @mixin pTitle() {
     text-align: center;
-    
+
     margin-top: 8vw;
 
     h2 {
-        font-family: $bodyTitle-font-family;
+        font-family: $body-font-family;
         color: $bodyTitle-color;
         font-size: $bodyTitle-font-size;
         margin: 2vw 0;
     }
 }
 
-
-// create image mixin here
-
-// create text mixin here
-
-
 .container {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    .standard-container{
-        
-       width:350px;
+    .standard-container {
+
+        width: 350px;
     }
 
 
@@ -128,22 +125,47 @@ $credit-font-size: 11px;
         margin: 3vh 0;
         border: 1px solid $secondary-background;
         box-shadow: 5px 5px $secondary-background;
-       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
     }
 
     .image img {
 
         max-width: 100%;
         height: auto;
-       
+
     }
 
     .text {
-       
+
         font-family: $body-font-family;
         font-size: $body-font-size;
         color: $body-color;
-        text-align:justify;
+        text-align: justify;
+    }
+
+    .contact-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+
+        a {
+            color: $nav-color;
+            font-size: 50px;
+            text-decoration: none;
+        }
+    }
+
+    .text-cont {
+        text-align: center;
+        color:$body-color;
+        a {
+            text-decoration: none;
+            color: $body-color
+        }
     }
 
 }
@@ -156,15 +178,15 @@ $credit-font-size: 11px;
 
 body {
     background-color: $primary-background;
-    
+
 }
 
 main {
 
     height: 90vh;
-    overflow: scroll;
-    margin:3vw;
-  
+    overflow: auto;
+    margin: 3vw;
+
 }
 
 header {
@@ -272,17 +294,18 @@ footer {
     .name {
         font-size: 14px;
     }
-    .contact-icon{
+
+    .contact-icon {
         display: flex;
         flex-direction: column;
     }
 
 
-} 
+}
 
 @media only screen and (min-width: 768px) {
-    
-    .contact-icon{
+
+    .contact-icon {
         display: flex;
         flex-direction: row;
     }
@@ -290,5 +313,5 @@ footer {
     .name {
         font-size: $nav-font-size;
     }
-   
+
 }
