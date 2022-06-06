@@ -39,6 +39,9 @@ $credit-font-size: 11px;
     .nav a {
         text-decoration: none;
         color: $nav-color;
+        padding: 10px 20px;
+        border-radius: 5px;
+        
     }
 
     .nav .brand {
@@ -50,8 +53,10 @@ $credit-font-size: 11px;
         list-style-type: none;
     }
 
-    .nav-list li {
-        padding: 10px 20px;
+
+    .nav-list a:hover {
+        background-color: lightgray;
+
     }
 }
 
@@ -174,6 +179,7 @@ $credit-font-size: 11px;
 
 .blog-wrap {
     background-color: rgb(241, 236, 236);
+    margin-top: 6vh;
 }
 
 .blog-title {
@@ -200,16 +206,38 @@ $credit-font-size: 11px;
     flex-wrap: wrap;
     // margin-left: 10vw;
 
+
+
+    h2,
+    h5,
+    p {
+        font-family: $body-font-family;
+        padding: 1vh;
+    }
+
     // add these to a media query
-    .blog-list {
-        width: 500px;
-    }
-
+    .blog-list,
     .blog-post {
-        width: 500px;
-        ;
+
+        position: relative;
+        padding: 3vw;
+        margin: 2vw;
+        border-radius: 10px;
+        //add this to media query
+        background-color: $primary-background;
+
+        span {
+            font-weight: bold;
+        }
+
     }
 
+    .blog-image {
+        width: 350px;
+        height: 200px;
+        margin: 1vh 0;
+        border: 1px solid $secondary-background;
+    }
 
 }
 
@@ -359,4 +387,13 @@ footer {
         font-size: $nav-font-size;
     }
 
+}
+
+@media only screen and (min-width: 0px) {
+
+    .blog-list,
+    .blog-post {
+        width: 100%;
+
+    }
 }

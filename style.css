@@ -48,6 +48,7 @@
 
 .blog-wrap {
   background-color: rgb(241, 236, 236);
+  margin-top: 6vh;
 }
 
 .blog-title {
@@ -71,11 +72,29 @@
   justify-content: flex-end;
   flex-wrap: wrap;
 }
-.blog-container .blog-list {
-  width: 500px;
+.blog-container h2,
+.blog-container h5,
+.blog-container p {
+  font-family: "Ubuntu", sans-serif;
+  padding: 1vh;
 }
+.blog-container .blog-list,
 .blog-container .blog-post {
-  width: 500px;
+  position: relative;
+  padding: 3vw;
+  margin: 2vw;
+  border-radius: 10px;
+  background-color: #f7f7f9;
+}
+.blog-container .blog-list span,
+.blog-container .blog-post span {
+  font-weight: bold;
+}
+.blog-container .blog-image {
+  width: 350px;
+  height: 200px;
+  margin: 1vh 0;
+  border: 1px solid #adb5bd;
 }
 
 * {
@@ -107,6 +126,8 @@ header .nav {
 header .nav a {
   text-decoration: none;
   color: rgba(26, 24, 24, 0.568627451);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 header .nav .brand {
   font-size: 28px;
@@ -115,8 +136,8 @@ header .nav .brand {
 header .nav-list {
   list-style-type: none;
 }
-header .nav-list li {
-  padding: 10px 20px;
+header .nav-list a:hover {
+  background-color: lightgray;
 }
 
 footer {
@@ -231,6 +252,12 @@ footer .contact-icon a {
   }
   .name {
     font-size: 17px;
+  }
+}
+@media only screen and (min-width: 0px) {
+  .blog-list,
+.blog-post {
+    width: 100%;
   }
 }
 
