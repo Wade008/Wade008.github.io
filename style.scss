@@ -18,7 +18,7 @@ $body-color: #000000;
 
 $credit-font-size: 11px;
 
-
+$blog-background-color: rgb(241, 236, 236);
 
 
 // nav component 
@@ -41,7 +41,7 @@ $credit-font-size: 11px;
         color: $nav-color;
         padding: 10px 20px;
         border-radius: 5px;
-        
+
     }
 
     .nav .brand {
@@ -93,16 +93,13 @@ $credit-font-size: 11px;
         color: $nav-color;
         padding: 5px 10px;
     }
-
-
-
 }
 
 // page title component
 @mixin pTitle() {
     text-align: center;
-
-    margin-top: 8vw;
+    overflow: inherit;
+    margin-top: 3vw;
 
     h2 {
         font-family: $body-font-family;
@@ -176,10 +173,19 @@ $credit-font-size: 11px;
 
 }
 
+// Blog page styling
+
+.blog-background {
+    background-color: $blog-background-color;
+    overflow: inherit;
+
+
+}
 
 .blog-wrap {
-    background-color: rgb(241, 236, 236);
-    margin-top: 6vh;
+
+    padding: 2vh;
+
 }
 
 .blog-title {
@@ -187,8 +193,6 @@ $credit-font-size: 11px;
     padding: 5vw;
     margin: 2vw;
     background-color: $primary-background;
-    position: relative;
-    top: 2vw;
     border-radius: 10px;
 
     h2 {
@@ -199,48 +203,53 @@ $credit-font-size: 11px;
     }
 }
 
-.blog-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    // margin-left: 10vw;
+h2,
+h5,
+p {
+    font-family: $body-font-family;
+    padding: 1vh;
+}
+
+// add these to a media query
+.blog-list-wrap {
+    float: right;
+    width: 25%;
+    background-color: inherit;
+
+}
+
+.blog-post-wrap {
+    float: left;
+    width: 75%;
+    background-color: inherit;
+}
 
 
+.blog-list,
+.blog-post {
 
-    h2,
-    h5,
-    p {
-        font-family: $body-font-family;
-        padding: 1vh;
-    }
+    padding: 3vw;
+    margin: 2vw;
+    border-radius: 10px;
+    background-color: $primary-background;
 
-    // add these to a media query
-    .blog-list,
-    .blog-post {
-
-        position: relative;
-        padding: 3vw;
-        margin: 2vw;
-        border-radius: 10px;
-        //add this to media query
-        background-color: $primary-background;
-
-        span {
-            font-weight: bold;
-        }
-
-    }
-
-    .blog-image {
-        width: 350px;
-        height: 200px;
-        margin: 1vh 0;
-        border: 1px solid $secondary-background;
+    span {
+        font-weight: bold;
     }
 
 }
 
+.blog-image {
+    width: 350px;
+    height: 200px;
+    margin: 1vh 0;
+    border: 1px solid $secondary-background;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 
 * {
@@ -295,7 +304,7 @@ footer {
     }
 
     button:hover {
-        background-color: lightgray;
+        background-color: $secondary-background;
     }
 }
 
@@ -378,21 +387,24 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
+    .name {
+        font-size: $nav-font-size;
+    }
+
     .contact-icon {
         display: flex;
         flex-direction: row;
     }
 
-    .name {
-        font-size: $nav-font-size;
-    }
 
 }
 
-@media only screen and (min-width: 0px) {
+// make blog page responsive
 
-    .blog-list,
-    .blog-post {
+@media only screen and (max-width: 1200px) {
+
+    .blog-list-wrap,
+    .blog-post-wrap {
         width: 100%;
 
     }

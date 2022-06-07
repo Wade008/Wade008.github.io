@@ -46,9 +46,13 @@
   color: #000000;
 }
 
-.blog-wrap {
+.blog-background {
   background-color: rgb(241, 236, 236);
-  margin-top: 6vh;
+  overflow: inherit;
+}
+
+.blog-wrap {
+  padding: 2vh;
 }
 
 .blog-title {
@@ -56,8 +60,6 @@
   padding: 5vw;
   margin: 2vw;
   background-color: #f7f7f9;
-  position: relative;
-  top: 2vw;
   border-radius: 10px;
 }
 .blog-title h2 {
@@ -66,35 +68,46 @@
   font-size: 32px;
 }
 
-.blog-container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-.blog-container h2,
-.blog-container h5,
-.blog-container p {
+h2,
+h5,
+p {
   font-family: "Ubuntu", sans-serif;
   padding: 1vh;
 }
-.blog-container .blog-list,
-.blog-container .blog-post {
-  position: relative;
+
+.blog-list-wrap {
+  float: right;
+  width: 25%;
+  background-color: inherit;
+}
+
+.blog-post-wrap {
+  float: left;
+  width: 75%;
+  background-color: inherit;
+}
+
+.blog-list,
+.blog-post {
   padding: 3vw;
   margin: 2vw;
   border-radius: 10px;
   background-color: #f7f7f9;
 }
-.blog-container .blog-list span,
-.blog-container .blog-post span {
+.blog-list span,
+.blog-post span {
   font-weight: bold;
 }
-.blog-container .blog-image {
+
+.blog-image {
   width: 350px;
   height: 200px;
   margin: 1vh 0;
   border: 1px solid #adb5bd;
+}
+.blog-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 * {
@@ -169,7 +182,8 @@ footer .contact-icon a {
 
 .page-title {
   text-align: center;
-  margin-top: 8vw;
+  overflow: inherit;
+  margin-top: 3vw;
 }
 .page-title h2 {
   font-family: "Ubuntu", sans-serif;
@@ -196,7 +210,7 @@ footer .contact-icon a {
   transition: 2s;
 }
 .resume button:hover {
-  background-color: lightgray;
+  background-color: #adb5bd;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -246,17 +260,17 @@ footer .contact-icon a {
   }
 }
 @media only screen and (min-width: 768px) {
+  .name {
+    font-size: 17px;
+  }
   .contact-icon {
     display: flex;
     flex-direction: row;
   }
-  .name {
-    font-size: 17px;
-  }
 }
-@media only screen and (min-width: 0px) {
-  .blog-list,
-.blog-post {
+@media only screen and (max-width: 1200px) {
+  .blog-list-wrap,
+.blog-post-wrap {
     width: 100%;
   }
 }
