@@ -8,7 +8,7 @@
   width: 350px;
 }
 .container .image {
-  width: 350px;
+  width: 100%;
   height: 350px;
   margin: 3vh 0;
   border: 1px solid #adb5bd;
@@ -34,7 +34,7 @@
 }
 .container .contact-icon a {
   color: rgba(26, 24, 24, 0.568627451);
-  font-size: 50px;
+  font-size: 40px;
   text-decoration: none;
 }
 .container .text-cont {
@@ -47,7 +47,7 @@
 }
 
 .blog-background {
-  background-color: rgb(241, 236, 236);
+  background-color: rgb(230, 222, 222);
   overflow: inherit;
 }
 
@@ -77,13 +77,13 @@ p {
 
 .blog-list-wrap {
   float: right;
-  width: 25%;
+  width: 40%;
   background-color: inherit;
 }
 
 .blog-post-wrap {
   float: left;
-  width: 75%;
+  width: 60%;
   background-color: inherit;
 }
 
@@ -101,7 +101,7 @@ p {
 
 .blog-image {
   width: 350px;
-  height: 200px;
+  height: 218.75px;
   margin: 1vh 0;
   border: 1px solid #adb5bd;
 }
@@ -268,7 +268,7 @@ footer .contact-icon a {
     flex-direction: row;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   .blog-list-wrap,
 .blog-post-wrap {
     width: 100%;
