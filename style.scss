@@ -1,22 +1,20 @@
-$primary-background: #f7f7f9;
+$primary-background: white;
 $secondary-background: #adb5bd;
 
 $nav-font-size: 17px;
 $brand-font-size: 28px;
 $nav-font-family: "Poppins Light",
 sans-serif;
-$nav-color: #1a181891;
-$nav-hover: lightgray;
+
+$main-font-color: #fffffffa;
+$secondary-font-color: rgb(0, 0, 0);
 
 $body-font-family: "Ubuntu",
 sans-serif;
 
 $bodyTitle-font-size: 32px;
-$bodyTitle-color: #1a181891;
-
 
 $body-font-size: 18px;
-$body-color: #000000;
 
 $credit-font-size: 11px;
 
@@ -39,7 +37,7 @@ $blog-background-color: rgb(230, 222, 222);
 
     .nav a {
         text-decoration: none;
-        color: $nav-color;
+        color: $main-font-color;
         padding: 10px 20px;
         border-radius: 5px;
 
@@ -55,10 +53,10 @@ $blog-background-color: rgb(230, 222, 222);
     }
 
 
-    .nav-list a:hover {
-        background-color: $nav-hover;
+    // .nav-list a:hover {
+    //     background-color: $nav-hover;
 
-    }
+    // }
 }
 
 // footer component
@@ -77,21 +75,21 @@ $blog-background-color: rgb(230, 222, 222);
     }
 
     .credit a {
-        color: $nav-color;
+        color: $secondary-font-color;
         font-family: $nav-font-family;
         font-size: $credit-font-size;
         text-decoration: none;
     }
 
     .name {
-        color: $nav-color;
+        color: $secondary-font-color;
         font-family: $nav-font-family;
 
     }
 
     .contact-icon a {
         text-decoration: none;
-        color: $nav-color;
+        color: $secondary-font-color;
         padding: 5px 10px;
     }
 }
@@ -104,7 +102,7 @@ $blog-background-color: rgb(230, 222, 222);
 
     h2 {
         font-family: $body-font-family;
-        color: $bodyTitle-color;
+        color: $main-font-color;
         font-size: $bodyTitle-font-size;
         margin: 2vw 0;
     }
@@ -131,6 +129,7 @@ $blog-background-color: rgb(230, 222, 222);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: $primary-background;
 
     }
 
@@ -145,7 +144,7 @@ $blog-background-color: rgb(230, 222, 222);
 
         font-family: $body-font-family;
         font-size: $body-font-size;
-        color: $body-color;
+        color: $main-font-color;
         text-align: justify;
     }
 
@@ -156,7 +155,7 @@ $blog-background-color: rgb(230, 222, 222);
 
 
         a {
-            color: $nav-color;
+            color: $secondary-font-color;
             font-size: 40px;
             text-decoration: none;
         }
@@ -164,11 +163,15 @@ $blog-background-color: rgb(230, 222, 222);
 
     .text-cont {
         text-align: center;
-        color: $body-color;
+        color: $main-font-color;
+        font-size: $body-font-size;
+        font-family: $body-font-family;
+
+     
 
         a {
             text-decoration: none;
-            color: $body-color
+            color: inherit;
         }
     }
 
@@ -178,13 +181,19 @@ $blog-background-color: rgb(230, 222, 222);
 .blog-background {
     background-color: $blog-background-color;
     overflow: inherit;
-
-
 }
 
 .blog-wrap {
 
     padding: 2vh;
+
+    h2, h5, p {
+        font-family: $body-font-family;
+        padding: 1vh;
+        color: $secondary-font-color;
+    }
+    
+    
 
 }
 
@@ -197,17 +206,10 @@ $blog-background-color: rgb(230, 222, 222);
 
     h2 {
         font-family: $body-font-family;
-        color: $bodyTitle-color;
+        color: $secondary-font-color;
         font-size: $bodyTitle-font-size;
 
     }
-}
-
-h2,
-h5,
-p {
-    font-family: $body-font-family;
-    padding: 1vh;
 }
 
 // add these to a media query
@@ -259,7 +261,12 @@ p {
 }
 
 body {
-    background-color: $primary-background;
+    // background-color: $primary-background;
+    background-image: url(./resources/background_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
 
 }
 
@@ -292,7 +299,7 @@ footer {
     button {
         display: inline-block;
         background-color: gray;
-        color: white;
+        color: $primary-background;
         text-transform: none;
         font-family: $body-font-family;
         font-size: $body-font-size;
