@@ -52,11 +52,6 @@ $blog-background-color: rgb(230, 222, 222);
         list-style-type: none;
     }
 
-
-    // .nav-list a:hover {
-    //     background-color: $nav-hover;
-
-    // }
 }
 
 // footer component
@@ -101,25 +96,16 @@ $blog-background-color: rgb(230, 222, 222);
     margin-top: 3vw;
 
     h2 {
-        font-family: $body-font-family;
+        font-family: $nav-font-family;
+        font-weight: lighter;
         color: $main-font-color;
         font-size: $bodyTitle-font-size;
         margin: 2vw 0;
     }
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
-    .standard-container {
-
-        width: 350px;
-    }
-
-
+// standard image component
+@mixin standImage() {
     .image {
         width: 100%;
         height: 350px;
@@ -139,7 +125,12 @@ $blog-background-color: rgb(230, 222, 222);
         height: auto;
 
     }
+}
 
+
+// standard text component
+
+@mixin standText() {
     .text {
 
         font-family: $body-font-family;
@@ -167,15 +158,97 @@ $blog-background-color: rgb(230, 222, 222);
         font-size: $body-font-size;
         font-family: $body-font-family;
 
-     
+
 
         a {
             text-decoration: none;
             color: inherit;
         }
     }
+}
+
+// The mixins and other styles are applied below
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // background-color: $primary-background;
+    background-image: url(./resources/background_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 
 }
+
+main {
+
+    height: 90vh;
+    overflow: auto;
+    margin: 3vw;
+
+}
+
+header {
+    @include nav;
+}
+
+footer {
+    @include foot;
+
+}
+
+.page-title {
+    @include pTitle;
+}
+
+
+// Standard container 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .standard-container {
+
+        width: 350px;
+    }
+
+    @include standImage;
+
+    @include standText;
+
+}
+
+// Resume button styling
+.resume {
+    text-align: center;
+    margin: 4vw;
+
+    button {
+        display: inline-block;
+        background-color: gray;
+        color: $primary-background;
+        text-transform: none;
+        font-family: $body-font-family;
+        font-size: $body-font-size;
+        font-weight: bold;
+        border: none;
+        padding: 15px 32px;
+        border-radius: 6px;
+        transition: 2s;
+    }
+
+    button:hover {
+        background-color: $secondary-background;
+    }
+}
+
 // Blog page styling
 
 .blog-background {
@@ -187,13 +260,15 @@ $blog-background-color: rgb(230, 222, 222);
 
     padding: 2vh;
 
-    h2, h5, p {
+    h2,
+    h5,
+    p {
         font-family: $body-font-family;
         padding: 1vh;
         color: $secondary-font-color;
     }
-    
-    
+
+
 
 }
 
@@ -238,7 +313,6 @@ $blog-background-color: rgb(230, 222, 222);
     span {
         font-weight: bold;
     }
-
 }
 
 .blog-image {
@@ -253,67 +327,6 @@ $blog-background-color: rgb(230, 222, 222);
     }
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    // background-color: $primary-background;
-    background-image: url(./resources/background_img.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
-
-}
-
-main {
-
-    height: 90vh;
-    overflow: auto;
-    margin: 3vw;
-
-}
-
-header {
-    @include nav;
-}
-
-footer {
-    @include foot;
-
-}
-
-.page-title {
-    @include pTitle;
-}
-
-
-.resume {
-    text-align: center;
-    margin: 4vw;
-
-    button {
-        display: inline-block;
-        background-color: gray;
-        color: $primary-background;
-        text-transform: none;
-        font-family: $body-font-family;
-        font-size: $body-font-size;
-        font-weight: bold;
-        border: none;
-        padding: 15px 32px;
-        border-radius: 6px;
-        transition: 2s;
-    }
-
-    button:hover {
-        background-color: $secondary-background;
-    }
-}
 
 
 

@@ -1,116 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.container .standard-container {
-  width: 350px;
-}
-.container .image {
-  width: 100%;
-  height: 350px;
-  margin: 3vh 0;
-  border: 1px solid #adb5bd;
-  box-shadow: 5px 5px #adb5bd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-}
-.container .image img {
-  max-width: 100%;
-  height: auto;
-}
-.container .text {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.9803921569);
-  text-align: justify;
-}
-.container .contact-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.container .contact-icon a {
-  color: rgb(0, 0, 0);
-  font-size: 40px;
-  text-decoration: none;
-}
-.container .text-cont {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9803921569);
-  font-size: 18px;
-  font-family: "Ubuntu", sans-serif;
-}
-.container .text-cont a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.blog-background {
-  background-color: rgb(230, 222, 222);
-  overflow: inherit;
-}
-
-.blog-wrap {
-  padding: 2vh;
-}
-.blog-wrap h2, .blog-wrap h5, .blog-wrap p {
-  font-family: "Ubuntu", sans-serif;
-  padding: 1vh;
-  color: rgb(0, 0, 0);
-}
-
-.blog-title {
-  text-align: center;
-  padding: 5vw;
-  margin: 2vw;
-  background-color: white;
-  border-radius: 10px;
-}
-.blog-title h2 {
-  font-family: "Ubuntu", sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 32px;
-}
-
-.blog-list-wrap {
-  float: right;
-  width: 40%;
-  background-color: inherit;
-}
-
-.blog-post-wrap {
-  float: left;
-  width: 60%;
-  background-color: inherit;
-}
-
-.blog-list,
-.blog-post {
-  padding: 3vw;
-  margin: 2vw;
-  border-radius: 10px;
-  background-color: white;
-}
-.blog-list span,
-.blog-post span {
-  font-weight: bold;
-}
-
-.blog-image {
-  width: 350px;
-  height: 218.75px;
-  margin: 1vh 0;
-  border: 1px solid #adb5bd;
-}
-.blog-image img {
-  max-width: 100%;
-  height: auto;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -187,10 +74,62 @@ footer .contact-icon a {
   margin-top: 3vw;
 }
 .page-title h2 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Poppins Light", sans-serif;
+  font-weight: lighter;
   color: rgba(255, 255, 255, 0.9803921569);
   font-size: 32px;
   margin: 2vw 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container .standard-container {
+  width: 350px;
+}
+.container .image {
+  width: 100%;
+  height: 350px;
+  margin: 3vh 0;
+  border: 1px solid #adb5bd;
+  box-shadow: 5px 5px #adb5bd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+.container .image img {
+  max-width: 100%;
+  height: auto;
+}
+.container .text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9803921569);
+  text-align: justify;
+}
+.container .contact-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.container .contact-icon a {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  text-decoration: none;
+}
+.container .text-cont {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9803921569);
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+}
+.container .text-cont a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .resume {
@@ -212,6 +151,70 @@ footer .contact-icon a {
 }
 .resume button:hover {
   background-color: #adb5bd;
+}
+
+.blog-background {
+  background-color: rgb(230, 222, 222);
+  overflow: inherit;
+}
+
+.blog-wrap {
+  padding: 2vh;
+}
+.blog-wrap h2,
+.blog-wrap h5,
+.blog-wrap p {
+  font-family: "Ubuntu", sans-serif;
+  padding: 1vh;
+  color: rgb(0, 0, 0);
+}
+
+.blog-title {
+  text-align: center;
+  padding: 5vw;
+  margin: 2vw;
+  background-color: white;
+  border-radius: 10px;
+}
+.blog-title h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+}
+
+.blog-list-wrap {
+  float: right;
+  width: 40%;
+  background-color: inherit;
+}
+
+.blog-post-wrap {
+  float: left;
+  width: 60%;
+  background-color: inherit;
+}
+
+.blog-list,
+.blog-post {
+  padding: 3vw;
+  margin: 2vw;
+  border-radius: 10px;
+  background-color: white;
+}
+.blog-list span,
+.blog-post span {
+  font-weight: bold;
+}
+
+.blog-image {
+  width: 350px;
+  height: 218.75px;
+  margin: 1vh 0;
+  border: 1px solid #adb5bd;
+}
+.blog-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 1200px) {
