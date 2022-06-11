@@ -90,6 +90,9 @@ footer .contact-icon a {
 .container .standard-container {
   width: 350px;
 }
+.container a {
+  text-decoration: none;
+}
 .container .image {
   width: 100%;
   height: 350px;
@@ -201,6 +204,10 @@ footer .contact-icon a {
   border-radius: 10px;
   background-color: white;
 }
+.blog-list a,
+.blog-post a {
+  text-decoration: none;
+}
 .blog-list span,
 .blog-post span {
   font-weight: bold;
@@ -276,6 +283,28 @@ footer .contact-icon a {
   .blog-list-wrap,
 .blog-post-wrap {
     width: 100%;
+  }
+  .blog-image {
+    width: 290px;
+    height: 181.25px;
+    margin: 1vh 0;
+    border: 1px solid #adb5bd;
+  }
+  .blog-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .blog-image {
+    width: 310px;
+    height: 193.75px;
+    margin: 1vh 0;
+    border: 1px solid #adb5bd;
+  }
+  .blog-image img {
+    max-width: 100%;
+    height: auto;
   }
 }
 

@@ -1,3 +1,5 @@
+
+// variables for background colour, font-family, font size and font colour
 $primary-background: white;
 $secondary-background: #adb5bd;
 
@@ -20,6 +22,7 @@ $credit-font-size: 11px;
 
 $blog-background-color: rgb(230, 222, 222);
 
+// Mixins have been used to build and style the different components
 
 // nav component 
 @mixin nav() {
@@ -207,7 +210,7 @@ footer {
 }
 
 
-// Standard container 
+// Standard container - applies to all pages but the blog page
 .container {
     display: flex;
     flex-direction: row;
@@ -217,6 +220,10 @@ footer {
     .standard-container {
 
         width: 350px;
+    }
+
+    a {
+        text-decoration: none
     }
 
     @include standImage;
@@ -249,7 +256,7 @@ footer {
     }
 }
 
-// Blog page styling
+// Styling of the internal parts of the blog page is unique. Standard image and standard text components are not used for this page.
 
 .blog-background {
     background-color: $blog-background-color;
@@ -310,6 +317,9 @@ footer {
     border-radius: 10px;
     background-color: $primary-background;
 
+     a{
+        text-decoration: none;
+     }   
     span {
         font-weight: bold;
     }
@@ -328,7 +338,7 @@ footer {
 }
 
 
-
+// All media queries are listed below
 
 // Make nav bar responsive
 
@@ -422,10 +432,40 @@ footer {
 // make blog page responsive
 
 @media only screen and (max-width: 768px) {
-
+    // change the width of both containers
     .blog-list-wrap,
     .blog-post-wrap {
         width: 100%;
 
     }
+    // Reduce the size of the image and maintain aspect ratio
+    .blog-image {
+        width: 290px;
+        height: 181.25px;
+        margin: 1vh 0;
+        border: 1px solid $secondary-background;
+    
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+ // Reduce the size of the image and maintain aspect ratio
+ .blog-image {
+    width: 310px;
+    height: 193.75px;
+    margin: 1vh 0;
+    border: 1px solid $secondary-background;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
 }
