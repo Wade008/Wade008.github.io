@@ -90,6 +90,7 @@ $blog-background-color: rgb(230, 222, 222);
         color: $secondary-font-color;
         padding: 5px 10px;
     }
+
 }
 
 // page title component
@@ -400,20 +401,7 @@ footer {
 
 // make footer responsive
 
-@media only screen and (min-width: 0px) {
 
-
-    .name {
-        font-size: 14px;
-    }
-
-    .contact-icon {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-}
 
 @media only screen and (min-width: 768px) {
 
@@ -429,7 +417,43 @@ footer {
 
 }
 
+@media only screen and (max-width: 768px) {
+
+
+    .name {
+        font-size: 14px;
+    }
+
+    .contact-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+
 // make blog page responsive
+
+
+@media only screen and (max-width: 1200px) {
+
+ // Reduce the size of the image and maintain aspect ratio
+ .blog-image {
+    width: 310px;
+    height: 193.75px;
+    margin: 1vh 0;
+    border: 1px solid $secondary-background;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+}
+
 
 @media only screen and (max-width: 768px) {
     // change the width of both containers
@@ -450,22 +474,4 @@ footer {
             height: auto;
         }
     }
-}
-
-@media only screen and (max-width: 1200px) {
-
- // Reduce the size of the image and maintain aspect ratio
- .blog-image {
-    width: 310px;
-    height: 193.75px;
-    margin: 1vh 0;
-    border: 1px solid $secondary-background;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-
 }

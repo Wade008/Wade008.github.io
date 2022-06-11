@@ -261,15 +261,6 @@ footer .contact-icon a {
     align-items: flex-start;
   }
 }
-@media only screen and (min-width: 0px) {
-  .name {
-    font-size: 14px;
-  }
-  .contact-icon {
-    display: flex;
-    flex-direction: column;
-  }
-}
 @media only screen and (min-width: 768px) {
   .name {
     font-size: 17px;
@@ -280,13 +271,18 @@ footer .contact-icon a {
   }
 }
 @media only screen and (max-width: 768px) {
-  .blog-list-wrap,
-.blog-post-wrap {
-    width: 100%;
+  .name {
+    font-size: 14px;
   }
+  .contact-icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1200px) {
   .blog-image {
-    width: 290px;
-    height: 181.25px;
+    width: 310px;
+    height: 193.75px;
     margin: 1vh 0;
     border: 1px solid #adb5bd;
   }
@@ -295,10 +291,14 @@ footer .contact-icon a {
     height: auto;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
+  .blog-list-wrap,
+.blog-post-wrap {
+    width: 100%;
+  }
   .blog-image {
-    width: 310px;
-    height: 193.75px;
+    width: 290px;
+    height: 181.25px;
     margin: 1vh 0;
     border: 1px solid #adb5bd;
   }
